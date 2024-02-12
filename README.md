@@ -55,7 +55,12 @@ torrent info <torrent file>
 ### Questions
 - Q1 - Create a torrent containing [this image](https://cdn.futura-sciences.com/sources/images/Chaton.jpeg).
 - Q2 - Now copy the image to a new directory named `partition1` and create a torrent of this folder. What do you observe?
+
+The file contains all the documents included in partition1. In our case, it contains only the image, so it contains the image in the context of the file.
+
 - Q3 - Copy the `partition1` folder and then generate the associated torrent. What do you observe?
+
+Although torrents have the same content, they are not the same. For example, the infoHash is different.
 
 ## IPFS
 
@@ -577,8 +582,13 @@ Now that you've installed IPFS Kubo:
 ### Questions
 Be sure to have download [IPFS Desktop](#install-the-ipfs-desktop-app) and [IPFS CLI](#install-the-ipfs-desktop-cli) before starting this section
 - Q1 - Upload the previous [image]() to IPFS.
+QmeJaufp9seXCpHMFwxX53P3oRQW8Ny1DduCXAxebEwxv7
+  
 - Q2 - Now upload `partition1` to IPFS. What do you observe compared to the torrent part?
+Each file gets its own CID, unlike torrent where you need the whole file to access its content.
+
 - Q3 - Copy the `partition1` folder and then generate the associated torrent. What do you observe?
+The hashes of partition1 and partition2 are, unlike torrent, the same. This demonstrates the deduplication efficiency of IPFS.
 
 ### Create your first decentralized website
 
